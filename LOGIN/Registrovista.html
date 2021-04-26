@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRO DE USUARIO</title>
+    <link rel="stylesheet" href="CSS/Normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form class="formulario">
+        <h1>Registrate</h1>
+            <div class="contenedor">
+                 <div class="inputcontenedor">
+                    <i class="far fa-user icon"></i>
+                    <a>Tipo De Identificacion</a>
+                    <label for="inputcontenedor"></label>
+                    <select name="cars" id="cars">
+                        <option value="NIT">NIT</option>
+                      <option value="CC">CEDULA DE CIUDADANIA</option>
+                      <option value="CE">CEDULA EXTRANJERIA</option>
+                      <option value="TI">TARJETA DE IDENTIDAD</option>
+                      <option value="RC">REGISTRO CIVIL</option>
+                    </select>
+                </div>
+                <div class="inputcontenedor">
+                    <i class="far fa-id-badge"></i>
+                    <a>Numero identificacion</a>
+                    <input type="text" class="general">
+                </div>
+
+                <div class="inputcontenedor">
+                    <i class="far fa-user"></i>
+                    <a>Nombres Completos</a>
+                    <input type="text" class="general">
+                </div>
+
+                <div class="inputcontenedor">
+                    <i class="far fa-user"></i>
+                    <a>Apellidos Completos</a>
+                    <input type="text" class="general">
+                </div>
+
+                <div class="inputcontenedor">
+                    <i class="fas fa-file-signature"></i>
+                    <a>Correo Electronico</a>
+                    <input type="text" class="general">
+                </div>
+                <div class="inputcontenedor">
+                    <i class="fas fa-monument"></i>
+                    <a>Numero Telefonico</a>
+                    <input type="text" class="general">
+                </div>
+                <div class="inputcontenedor">
+                    <i class="far fa-user icon"></i>
+                    <a>Seleccione Su Rol</a>
+                    <label for="inputcontenedor"></label>
+                    <select name="cars" id="cars">
+                        <option value="SR">Seleccione Rol</option>
+                        <option value="a">Acudiente</option>
+                      <option value="E">Estudiante</option>
+                      <option value="C">Coordinador</option>
+                      <option value="D">Docente</option>
+                    </select>
+                </div>
+                <div class="inputcontenedor">
+                    <i class="fas fa-lock icon"></i>
+                    <a> CONTRASEÑA    </a>
+                    <input type="password" class="general">     
+                </div>
+                <div class="inputcontenedor">
+                    <i class="fas fa-user-check"></i>
+                    <a>Confirmar Contraseña</a>
+                    <input type="password" class="general">     
+                </div>          
+
+                <input type="submit" value="Registrarse" class="button">
+                <p>Al registrarte aceptas nuestras condiciones y politicas de seguridad by copyrigh</p>
+                <p>Ya tienes una cuenta?  <a href="loginvista.html" class="link">Inicia sesion</a></p>                   
+            </div>
+    </form>
+</body>
+</html> 

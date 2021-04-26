@@ -1,0 +1,107 @@
+:root{
+    --blanco:#ffffff;
+    --Negro: #212121; 
+    --primario: #ffc107;  
+    --secundario: #0097a7;
+    --terciario: #757575;
+    --pref: #fc0176; 
+}
+
+body{
+    font-size: 16PX;
+    /*Agregar la fuente en todo el documento*/
+    font-family: 'Ubuntu', sans-serif;
+    background-image: url(../Imagenes/1.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;  
+}
+
+*   {
+    box-sizing: border-box;
+
+}
+h1{
+    text-align: center;
+    color: var(--Negro);
+    font-size: 40;
+}
+.contenedor{
+    width: 100%;
+    padding: 15px;
+    color: var(--Negro);
+    text-align: center;
+}
+.formulario{
+    background:rgba(138,221,45,0);
+    margin: 15px;
+    padding: 3px;
+}
+.general{
+    border: 8px solid var(--Negro);
+    border-radius: 11px;
+    font-size: 18px;
+    height: .2%;
+    padding: .2%;
+    gap: 5rem;
+
+}
+
+.inputcontenedor{
+    background-color: var(--Negro);
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    margin-top: 3rem;   
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: .5rem;
+    text-align: center;
+    border: none;
+    gap:2rem;   
+    
+   
+}
+.icon{
+    min-width: 5px;
+    text-align: right   ;
+    gap: 0.2rem;
+}
+.button{
+    border-color: var(--blanco);
+    border-radius: 5px;
+    width: 15rem;
+    padding: .5rem;
+    color: var(--blanco);
+    background-color: var(--Negro);
+    cursor: pointer;      
+    font-weight: 600;   
+    
+}
+.button:hover{
+    background: cadetblue;
+}
+p { 
+    text-align: center;
+}
+.link{
+    text-decoration: none;
+    font-weight: 600;
+    
+}
+
+.link:hover{
+    color: cadetblue;
+
+}
+@media(min-width:768px){
+    .formulario{
+        flex-direction: row;
+        margin: auto;
+        width: 500px;
+        margin-top: 150px ;
+        border-radius: 2px;
+    }
+
+
+}

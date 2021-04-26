@@ -1,0 +1,292 @@
+
+/*Definir los colores en css para usarlos*/
+:root{
+    --blanco:#ffffff;
+    --Negro: #212121; 
+    --primario: #ffc107;  
+    --secundario: #0097a7;
+    --terciario: #757575;
+    --pref: #fc0176;    
+    --fondo: #dfe9f3;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; 
+    scroll-snap-type: y mandatory;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16PX;
+    /*Agregar la fuente en todo el documento*/
+    font-family: 'Roboto', sans-serif; 
+    /*Degradado en el fondo de la pagina web*/
+    background-image: linear-gradient(to top var(--fondo) 0% , var(--blanco) 100%);
+}
+h1{
+    font-size: 3.8rem;
+
+}
+h2{
+    font-size: 2.8rem;
+
+}
+h3{
+    font-size: 1.8rem;
+   
+}
+h1, h2, h3{
+    text-align: center;
+}
+
+.titulo span{
+    font-size: 2rem;     
+}
+
+.contenedor{
+    max-width: 100rem;
+    margin: 0 auto  ;
+    color: var(--blanco);
+}
+/*Botones*/
+.Boton{
+    background-color: var(--Negro);
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    margin-top: 3rem;   
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    text-align: center;
+    border: none;
+}
+.Boton:hover{
+    background: #fc0176;
+}
+
+@media(min-width:768px ){
+     .boton{
+        width: auto;
+     }
+}
+
+.sombra{
+    -webkit-box-shadow: 7px 6px 11px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 7px 6px 11px 0px rgba(0,0,0,0.45);
+    box-shadow: 7px 6px 11px 0px rgba(0,0,0,0.45);
+    background-color: var(--Negro);
+    padding: 5rem;
+    border-radius: .5rem;
+    
+}
+/*==============================*/
+/*Barra de navegacion*/
+
+/*Utilidades*/
+.nav-bg{
+    background-color: var(--Negro);
+}
+.w .Boton{
+    width: 100%;    
+}
+@media(min-width: 768px){
+    .w .Boton{
+        width:auto;    
+    }
+}
+.flex{
+    display: flex;    
+}
+    
+.alinear{
+    justify-content: flex-end ;
+    
+}
+
+
+.navegacionprincipal{
+    background-color: var(--Negro);
+    /*Mover de sitio los elementos de la navegacion*/
+    display: flex;
+    flex-direction: column;
+    /*======================*/
+}
+
+/*Sitio adaptable a otros dispositivos*/
+/*hereda de la barra de arriba y se cambia el flex direction*/
+@media(min-width: 768px){
+    .navegacionprincipal{
+       flex-direction: row;
+       justify-content: space-between;
+    }   
+}
+/*====================================*/
+
+.navegacionprincipal a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 2rem;    
+    font-weight: bold;
+    /*Rellenar el texto de los links*/
+    padding: 1rem;
+}
+
+.navegacionprincipal a:hover{     
+        background-color: var(--pref);
+        color: var(--blanco);
+}
+
+/*===========================*/
+
+/*Imagen en la pagina*/
+
+.hero{
+    background-image:url(../Imagenes/hero.jpg) ;
+    background-repeat: no-repeat;   
+    background-size: cover;
+    height: 410px;      
+    /*Colocar posicion relativa siempre al padre */
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.Contenidohero{
+
+    position: absolute;
+    /*Colocar trasparencia a la imagen*/
+    background-color: rgba(0, 0,0, .5);
+    /*================================*/
+    height: 100%;
+    width: 100%;
+    /* Pocision De Texto de la imagen*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}   
+
+.Contenidohero h2,
+.Contenidohero p{
+    color: var(--blanco);
+}
+
+.ubicacion{
+    display: flex;
+    align-items: flex-end; 
+}
+
+/*=====================*/
+/*Servicios*/
+.servicio , .nav-bg , .formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+@media(min-width: 768px){
+    .servicios{
+        /*Display grid es para alinear tus textos de manera horizontal o vertical*/
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        /*Para alinear el contenido*/
+        column-gap: 15px;
+    }
+}
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio h3{
+    color: var(--pref);
+    font-weight: bold;
+
+}
+.servicio p{
+    line-height: 2;
+    text-align: center;
+
+}
+.servicio .icon{
+    height: 15rem;  
+    width: 15rem;   
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+/*=======================*/
+/*Formulario*/
+.formulario{
+    background-color: var(--blanco);
+    color: var(--Negro);
+    line-height: 2;
+    font-weight: bold;
+    width: min(60rem , 100%);/*Utilizar el valor mas pequenio*/
+    margin: 0 auto ;
+    border-radius: 10px;
+    /*padding es para agregar separacion*/
+    padding: 2rem  ;
+}
+.formulario fieldset{
+    /*Border sirve para que no tenga borde*/
+    border: none;
+}
+.formulario legend{
+    color: var(--Negro);
+    /*text transform sirve para colocar la letrra en mayuscula */ 
+    text-transform: uppercase;
+    /*text align center sirve para centrar el texto*/
+    text-align: center;
+    /*Font-size sirve para colocar la letra mas grande*/
+    font-size: 2rem;  
+    /*Colocar el texto en negrita*/
+    font-weight: 700;
+    /*Separar el texto hacia abajo*/
+    margin-bottom: 2rem ;   
+}
+@media(min-width: 768px){
+    .contenedorcampo{
+        display: grid;
+        /* grid-template-columns: repeat(2, 1fr);
+        /*colum gap es una separacion de columnas */
+        /* grid-template-rows: auto 20rem;
+        column-gap: 2rem;       */ 
+    }
+}
+
+.campo{
+    margin-bottom:1rem ;
+}
+
+.campo label{
+    color: var(--Negro);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.Input{
+    /*Width sirve para que tome todo el area disponible*/
+    width: 100%;
+    /*Sirve para tener el radio mas redondeado*/
+    border-radius: 5px;
+    padding: 1rem;   
+}
+.Boton:hover{
+cursor: pointer;
+}
+
+.campo textarea{
+
+    height: 20rem;
+}
+.footer{
+    text-align: center;
+}
